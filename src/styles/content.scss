@@ -1,0 +1,34 @@
+.negative-label-filter-list-sub-header {
+    margin: 0 5px 5px;
+}
+
+.negative-label-filter-list {
+    display: flex;
+    width: 260px;
+    flex-wrap: wrap;
+}
+.negative-label-filter-list-item-clickable button {
+    font-size: 10px;
+    margin: 0;
+    border: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.negative-label-filter-list-item-clickable {
+    float: left;
+    padding: 3px;
+    flex-grow: 1;
+}
+
+.card-label-darkgray {
+    background-color: darkgray;
+}
+
+.negative-label-filter-active {
+    box-shadow: inset 1px 1px 5px 0px #4f4545;
+}
+
+.card-label-darkgray.negative-label-filter-active {
+    box-shadow: none !important;
+}

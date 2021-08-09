@@ -1,0 +1,70 @@
+{
+    "name": "browser-extension-boilerplate",
+    "version": "1.0.1",
+    "description": "A boilerplate template for building cross browser extensions (Chrome and Firefox).",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.15.0",
+        "@babel/preset-env": "^7.15.0",
+        "babel-loader": "^8.2.2",
+        "compression-webpack-plugin": "^8.0.1",
+        "copy-webpack-plugin": "^9.0.1",
+        "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
+        "html-loader": "^2.1.2",
+        "html-webpack-plugin": "^5.3.2",
+        "mini-css-extract-plugin": "^2.2.0",
+        "rimraf": "^3.0.2",
+        "sass": "^1.37.5",
+        "sass-loader": "^12.1.0",
+        "standard": "^16.0.3",
+        "style-loader": "^3.2.1",
+        "ts-loader": "^9.2.5",
+        "typescript": "^4.3.5",
+        "url-loader": "^4.1.1",
+        "webextension-polyfill-ts": "^0.26.0",
+        "webpack": "^5.48.0",
+        "webpack-cli": "^4.7.2"
+    },
+    "scripts": {
+        "prebuild": "./node_modules/rimraf/bin.js ./extension/dist/",
+        "start": "node_modules/.bin/webpack --config webpack.config.js -w --mode development",
+        "build": "node_modules/.bin/webpack --config webpack.production.config.js --mode production",
+        "test": "node_modules/.bin/standard"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/williankeller/browser-extension-boilerplate"
+    },
+    "keywords": [
+        "extension",
+        "extension-boilerplate",
+        "chrome-extension",
+        "firefox-addon"
+    ],
+    "bugs": {
+        "url": "https://github.com/williankeller/browser-extension-boilerplate/issues"
+    },
+    "homepage": "https://github.com/williankeller/browser-extension-boilerplate",
+    "standard": {
+        "globals": [
+            "browser",
+            "chrome",
+            "window"
+        ],
+        "ignore": [
+            "extension/dist/",
+            "node_modules/"
+        ]
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "dependencies": {
+        "core-js": "3"
+    },
+    "browserslist": "last 2 Chrome versions"
+}
