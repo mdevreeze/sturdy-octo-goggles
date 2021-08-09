@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     options: path.resolve(__dirname, 'src/app/options.ts'),
     popup: path.resolve(__dirname, 'src/app/popup.ts'),
-    main: path.resolve(__dirname, 'src/app/main.ts')
+    main: path.resolve(__dirname, 'src/content-script/main.ts')
   },
 
   output: {
@@ -18,12 +18,7 @@ module.exports = {
     moduleIds: "named"
   },
   resolve: {
-    extensions: ['.js', '.json', '.scss', '.css', ".ts"],
-    alias: {
-      utils: path.resolve(__dirname, 'src/app/utils'),
-      images: path.resolve(__dirname, 'src/images'),
-      styles: path.resolve(__dirname, 'src/styles')
-    }
+    extensions: ['.js', '.json', '.scss', '.css', ".ts"]
   },
 
   module: {

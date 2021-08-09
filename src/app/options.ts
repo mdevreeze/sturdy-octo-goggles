@@ -1,6 +1,5 @@
 import { storage } from './utils/storage'
-
-import 'styles/options.scss'
+import '../styles/options.scss'
 
 class Options {
   private defaults = {

@@ -1,7 +1,5 @@
-var browser = require("webextension-polyfill");
-
-
-import 'styles/popup.scss'
+import { browser } from "webextension-polyfill-ts";
+import '../styles/popup.scss'
 
 class Popup {
   constructor () {
